@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luna de miel en el Sudeste Asiático | Aires de Mundo</title>
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '994869666568646');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=994869666568646&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -803,7 +825,7 @@
         estaremos encantados de ayudaros a crear una experiencia inolvidable.
       </p>
 
-      <form id="leadForm">
+      <form id="leadForm" action="https://script.google.com/macros/s/AKfycbwDESP9M4DXiei39xq1Lomo9_LvLakQGqOz5X4TaawLhRYgR9H53PxQwKqQzBYYYxKl/exec" method="POST" target="hidden_iframe">
 
         <div class="form-grid">
 
@@ -829,7 +851,7 @@
 
           <div class="form-group">
             <label for="fecha">Fecha aproximada</label>
-            <input id="fecha" name="fecha" type="text" placeholder="Ej. junio de 2026" />
+            <input id="fecha" name="fechaViaje" type="text" placeholder="Ej. junio de 2026" />
           </div>
 
           <div class="form-group">
@@ -844,11 +866,17 @@
 
         </div>
 
-        <button type="submit" class="btn" style="width:100%; margin-top:24px;">
+        <button id="submitButton" type="submit" class="btn" style="width:100%; margin-top:24px;">
           QUIERO NUESTRA PROPUESTA PERSONALIZADA
         </button>
 
       </form>
+
+      <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display:none;">
+      </iframe>
 
       <div class="form-note">
         Plazas limitadas para poder ofrecer un acompañamiento realmente personalizado.
@@ -864,13 +892,26 @@
 
   <script>
     const form = document.getElementById('leadForm');
+    const iframe = document.getElementById('hidden_iframe');
+    const submitButton = document.getElementById('submitButton');
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+    let formSubmitted = false;
 
-      alert('¡Gracias! Hemos recibido vuestra solicitud y os contactaremos pronto.');
+    form.addEventListener('submit', function() {
+      formSubmitted = true;
 
-      form.reset();
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.innerText = 'Enviando...';
+        submitButton.style.opacity = '0.75';
+        submitButton.style.cursor = 'not-allowed';
+      }
+    });
+
+    iframe.addEventListener('load', function() {
+      if (formSubmitted) {
+        window.location.href = 'https://airesdemundo.github.io/luna-miel/gracias.html';
+      }
     });
   </script>
 
