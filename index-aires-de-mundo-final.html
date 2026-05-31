@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luna de miel en el Sudeste Asiático | Aires de Mundo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --text: #1e1e1e;
+      --accent: #b88b5a;
+      --accent-dark: #9c7245;
+      --white: #ffffff;
+      --muted: #6b6b6b;
+      --border: #e6dfd7;
+      --max-width: 1180px;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 32px;
+      background: var(--accent);
+      color: white;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.46) 42%, rgba(0,0,0,0.14) 72%, rgba(0,0,0,0.04) 100%),
+        url('Foto 1.jpg') 65% center/cover;
+      color: white;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.92);
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+    }
+
+    .hero-micro {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .section-intro.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .card p {
+      margin-top: 10px;
+    }
+
+    .image-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+    }
+
+    .image-card.small img {
+      min-height: 320px;
+    }
+
+    .image-caption {
+      padding: 18px 22px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      background: white;
+    }
+
+    .founders {
+      background: #fffaf3;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .founders .grid-2 {
+      align-items: start;
+    }
+
+    .founders .image-card img {
+      height: 520px;
+      min-height: 0;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+
+    .founders .mini-kicker {
+      margin-bottom: 12px;
+    }
+
+    .founders h2 {
+      margin-bottom: 20px;
+    }
+
+    .founders-copy p + p {
+      margin-top: 16px;
+    }
+
+    .mini-kicker {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--accent-dark);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .visual-strip {
+      padding: 0 0 90px;
+      margin-top: -30px;
+    }
+
+    .visual-strip-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+    }
+
+    .visual-strip img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .steps .card {
+      position: relative;
+      padding-top: 60px;
+    }
+
+    .step-number {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .authority {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .authority div {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 16px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 10px;
+    }
+
+    .cta-section {
+      background:
+        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.70)),
+        url('Foto 6.jpg') center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.82);
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    form {
+      margin-top: 40px;
+      background: rgba(255,255,255,0.96);
+      padding: 40px;
+      border-radius: var(--radius);
+      max-width: 760px;
+      margin-inline: auto;
+      text-align: left;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 1rem;
+      font-family: inherit;
+      width: 100%;
+      background: white;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.78);
+    }
+
+    footer {
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .form-grid,
+      .visual-strip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      form {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .hero {
+        padding: 100px 0;
+        min-height: auto;
+      }
+
+      .image-card img {
+        min-height: 360px;
+      }
+
+      .visual-strip {
+        padding-bottom: 70px;
+      }
+
+      .visual-strip img {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 90%;
+      }
+
+      .hero {
+        min-height: 100svh;
+        padding: 38px 0 30px;
+        align-items: flex-start;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(0,0,0,0.72) 0%,
+            rgba(0,0,0,0.58) 36%,
+            rgba(0,0,0,0.24) 58%,
+            rgba(0,0,0,0.08) 100%
+          ),
+          url('Foto 2.jpg') 58% center/cover;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        padding-top: 0;
+      }
+
+      h1 {
+        font-size: clamp(1.72rem, 8.4vw, 2.32rem);
+        line-height: 1.08;
+        margin-bottom: 15px;
+        max-width: 96%;
+      }
+
+      .hero p {
+        font-size: 0.96rem;
+        line-height: 1.42;
+        margin-bottom: 18px;
+        max-width: 95%;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 13px 18px;
+        font-size: 0.8rem;
+        line-height: 1.25;
+        white-space: normal;
+      }
+
+      .hero-micro {
+        display: none;
+      }
+
+      .card {
+        padding: 26px;
+      }
+
+      .image-card img {
+        min-height: 340px;
+      }
+
+      .founders .image-card img {
+        height: auto;
+        min-height: 340px;
+        object-position: center;
+      }
+
+      .visual-strip img {
+        height: 300px;
+      }
+
+      .cta-section {
+        background:
+          linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.74)),
+          url('Foto 6.jpg') center/cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Vuestra luna de miel soñada por el Sudeste Asiático</h1>
+
+        <p>
+          Diseñamos viajes únicos, auténticos y personalizados para parejas que quieren vivir una experiencia inolvidable con total tranquilidad.
+        </p>
+
+        <a href="#formulario" class="btn">
+          QUIERO ORGANIZAR NUESTRA LUNA DE MIEL
+        </a>
+
+        <div class="hero-micro">
+          Os contactaremos personalmente para conoceros y empezar a diseñar vuestra propuesta de viaje.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section>
+    <div class="container">
+      <div class="section-intro">
+        <span class="mini-kicker">Vuestro viaje más especial</span>
+        <h2>Organizar una luna de miel así debería ilusionaros… no agobiaros</h2>
+
+        <p>
+          Entre la boda, el trabajo y el día a día, seguramente apenas tenéis tiempo
+          para organizar un viaje tan importante como os gustaría.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Lo que suele pasar</h3>
+          <p>
+            Paquetes genéricos, presupuestos poco claros, exceso de información
+            y miedo a equivocaros en un viaje tan especial.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Lo que realmente queréis</h3>
+          <p>
+            Un viaje único, auténtico y diseñado para vosotros. Algo que recordéis toda la vida.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDADORES -->
+  <section class="founders">
+    <div class="container">
+      <div class="grid-2">
+        <div class="founders-copy">
+          <span class="mini-kicker">Conoce a Aires de Mundo</span>
+          <h2>Diseñamos viajes desde la experiencia real, no desde un catálogo</h2>
+
+          <p>
+            Somos Adriana y Jorge, apasionados del Sudeste Asiático y de las aventuras.
+            Llevamos más de diez años recorriendo estos destinos, descubriendo rutas,
+            alojamientos, experiencias y rincones que no siempre aparecen en las guías.
+          </p>
+
+          <p>
+            Por eso cada luna de miel que organizamos nace de algo muy concreto:
+            entender cómo sois, qué os apetece vivir y qué tipo de viaje tiene sentido para vosotros.
+          </p>
+
+          <p>
+            Queremos que viajéis con libertad, pero con la tranquilidad de tenernos cerca antes
+            y durante todo el viaje.
+          </p>
+        </div>
+
+        <div class="image-card">
+          <img src="Foto 3.jpg" alt="Adriana y Jorge trabajando en el diseño de viajes personalizados">
+          <div class="image-caption">
+            Adriana y Jorge diseñando viajes desde el destino, con experiencia real sobre el terreno.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPUESTA DE VALOR -->
+  <section>
+    <div class="container">
+
+      <div class="section-intro">
+        <span class="mini-kicker">Nuestra forma de viajar</span>
+        <h2>Creamos lunas de miel diferentes para parejas que quieren viajar de verdad</h2>
+
+        <p>
+          En Aires de Mundo llevamos más de 10 años recorriendo el Sudeste Asiático
+          diseñando viajes personalizados basados en experiencias reales.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Itinerario 100% personalizado</h3>
+          <p>
+            Cada viaje se crea desde cero exclusivamente para vosotros.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Transparencia total</h3>
+          <p>
+            Sabréis en todo momento dónde va vuestro dinero.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Experiencia real en destino</h3>
+          <p>
+            Solo trabajamos países que conocemos profundamente de primera mano.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Soporte 24/7</h3>
+          <p>
+            Tendréis contacto directo con nosotros antes y durante todo el viaje.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMÁGENES DE APOYO -->
+  <section class="visual-strip">
+    <div class="container">
+      <div class="visual-strip-grid">
+        <img src="Foto 5.jpg" alt="Aires de Mundo viajando por playas del Sudeste Asiático">
+        <img src="Foto 4.jpg" alt="Adriana y Jorge en una cascada del Sudeste Asiático">
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="steps">
+    <div class="container">
+
+      <div class="section-intro center">
+        <span class="mini-kicker">Proceso sencillo</span>
+        <h2>Así organizamos vuestra luna de miel</h2>
+        <p>
+          Os acompañamos paso a paso para que la organización sea clara, tranquila y totalmente personalizada.
+        </p>
+      </div>
+
+      <div class="grid-2">
+
+        <div class="card">
+          <div class="step-number">1</div>
+          <h3>Nos conocemos</h3>
+          <p>
+            Rellenáis el formulario y hablamos con vosotros para entender qué tipo de viaje soñáis hacer.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step-number">2</div>
+          <h3>Diseñamos vuestra propuesta</h3>
+          <p>
+            Creamos una propuesta totalmente personalizada según vuestro estilo de viaje.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step-number">3</div>
+          <h3>Organizamos todo</h3>
+          <p>
+            Os ayudamos con ruta, alojamientos, transportes y recomendaciones reales.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step-number">4</div>
+          <h3>Disfrutáis con tranquilidad</h3>
+          <p>
+            Durante el viaje estaréis acompañados con soporte directo por WhatsApp.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section>
+    <div class="container">
+
+      <div class="section-intro">
+        <span class="mini-kicker">Parejas viajeras</span>
+        <h2>Parejas que ya vivieron su viaje más especial</h2>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card testimonial">
+          <p>
+            “Nuestra experiencia con Aires de Mundo fue excepcional. La planificación fue totalmente adaptada a nosotros.”
+          </p>
+          <div class="testimonial-author">
+            Salva y Tania · Tailandia
+          </div>
+        </div>
+
+        <div class="card testimonial">
+          <p>
+            “Su seguimiento durante el viaje te da una tranquilidad que no te la dan en otros sitios.”
+          </p>
+          <div class="testimonial-author">
+            Dani y Sandra · Tailandia
+          </div>
+        </div>
+
+        <div class="card testimonial">
+          <p>
+            “Después de nuestra luna de miel seguimos viajando con ellos porque entienden perfectamente cómo nos gusta viajar.”
+          </p>
+          <div class="testimonial-author">
+            Anna y Jonatan · Tailandia
+          </div>
+        </div>
+
+      </div>
+
+      <div class="authority">
+        <div>+1.187 días viajando por Asia</div>
+        <div>Especialistas en lunas de miel</div>
+        <div>Viajes personalizados</div>
+        <div>Soporte cercano 24/7</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+
+      <div class="section-intro">
+        <span class="mini-kicker">Dudas habituales</span>
+        <h2>Sabemos que probablemente os estáis preguntando esto</h2>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Y si nunca hemos viajado por Asia?</h3>
+        <p>
+          Precisamente por eso estamos aquí. Os acompañamos durante todo el proceso.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿El viaje estará demasiado organizado?</h3>
+        <p>
+          Diseñamos viajes flexibles para que viajéis a vuestro ritmo.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Tendremos apoyo durante el viaje?</h3>
+        <p>
+          Sí. Tendréis contacto directo por WhatsApp antes y durante toda la luna de miel.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Cómo sabemos si encajáis con nosotros?</h3>
+        <p>
+          Primero queremos conoceros y entender vuestra forma de viajar antes de preparar vuestra propuesta.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section" id="formulario">
+
+    <div class="container">
+
+      <h2>Aquí empieza vuestra luna de miel</h2>
+
+      <p>
+        Si buscáis un viaje auténtico, especial y diseñado exclusivamente para vosotros,
+        estaremos encantados de ayudaros a crear una experiencia inolvidable.
+      </p>
+
+      <form id="leadForm">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="nombre">Nombre y apellidos</label>
+            <input id="nombre" name="nombre" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input id="telefono" name="telefono" type="tel" required />
+          </div>
+
+          <div class="form-group">
+            <label for="destino">Destino de interés</label>
+            <input id="destino" name="destino" type="text" placeholder="Ej. Tailandia, Bali, Vietnam..." />
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha aproximada</label>
+            <input id="fecha" name="fecha" type="text" placeholder="Ej. junio de 2026" />
+          </div>
+
+          <div class="form-group">
+            <label for="presupuesto">Presupuesto aproximado</label>
+            <input id="presupuesto" name="presupuesto" type="text" placeholder="Escribid vuestro presupuesto aproximado" />
+          </div>
+
+          <div class="form-group full">
+            <label for="mensaje">¿Cómo imagináis vuestra luna de miel?</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contadnos qué tipo de viaje os gustaría vivir..."></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn" style="width:100%; margin-top:24px;">
+          QUIERO NUESTRA PROPUESTA PERSONALIZADA
+        </button>
+
+      </form>
+
+      <div class="form-note">
+        Plazas limitadas para poder ofrecer un acompañamiento realmente personalizado.
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © Aires de Mundo · Lunas de miel personalizadas por el Sudeste Asiático
+  </footer>
+
+  <script>
+    const form = document.getElementById('leadForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      alert('¡Gracias! Hemos recibido vuestra solicitud y os contactaremos pronto.');
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
